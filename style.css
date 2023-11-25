@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    z-index: 0;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 75px;
+    position: relative;
+    top: 0%;
+    background: url('imgs/download.jpg');
+    -webkit-background-clip: text;
+    color: transparent;
+    background-position-x: 17%;
+}
+.weight-label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(54, 99, 233);
+}
+.planet-label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: rgb(54, 99, 233)
+}
+
+#planetImage {
+    width: 500px;
+    height: auto;
+    position: absolute; /* Position the image absolutely */
+    bottom: 20%; /* Position it at the bottom of the screen */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Ensure it's centered properly */
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: -7%;
+    left: 1.75%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.modal-content {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(54, 99, 233); 
+    margin: 20% auto;
+    padding: 1px;
+    width: 20%;
+}
+.close-button {
+    color: rgb(54, 99, 233);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-button:hover,
+.close-button:focus {
+    color: rgb(255, 3, 3);
+    text-decoration: none;
+    cursor: pointer;
+}
