@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(12, 12, 51, 0.844);
+    background-color: rgba(1, 1, 7, 0.9);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -17,23 +17,18 @@ h1 {
     top: 0%;
     background: url('imgs/download.jpg');
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
     background-position-x: 25%;
     background-position-y: 12%;
 }
-.weight-label{
+.weight-label, .planet-label{
     font-family: 'Courier New', monospace;
-    font-size: 22px;
+    font-size: 20px;
     color: rgb(54, 127, 236);
     margin-left: 50px;
     text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
-}
-.planet-label{
-    font-family: 'Courier New', monospace;
-    font-size: 20px;
-    text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
-    color: rgb(54, 127, 236);
 }
 #planetImage {
     width: 500px;
@@ -43,10 +38,24 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     display: block;
-}
+} 
 #resultText{
-    font-family: 'helvetica, sans-serif';
-    font-size: 20px;
-    color: rgb(251, 66, 174);
-    margin-top: 5%;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 26px;
+    color: black;
+    margin-top: 2%;
+    padding: 0;
+    border-radius: 10px;
+    background: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    animation: pulseAnimation 1s infinite;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: none;
+    transition: all 0.3s ease-in-out;
 }
+#resultText:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
