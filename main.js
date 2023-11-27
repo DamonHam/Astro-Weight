@@ -33,26 +33,38 @@ document.querySelector('form').addEventListener('submit', function(event) {
   }
   document.querySelector('#resultText').textContent = resultText;
 
-  // Update the image source based on the selected planet
   var planetImage = document.getElementById('planetImage');
   planetImage.src = `imgs/${planet}.png`;
-  planetImage.style.display = 'block'; // Show the image
+  planetImage.style.display = 'block';
+});
 
+window.onload = function() {
+const planets = {
+  sun: 27.9,
+  mercury: 0.377,
+  venus: 0.9032,
+  earth: 1,
+  moon: 0.1655,
+  mars: 0.3895,
+  jupiter: 2.640,
+  saturn: 1.139,
+  uranus: 0.917,
+  neptune: 1.148,
+  pluto: 0.06
+};
 
-  // Display the modal
-  var modal = document.getElementById("resultModal");
-  modal.style.display = "block";
+var select = document.getElementById("planet");
+Object.keys(planets).forEach(function(key) {
+  var option = document.createElement("option");
+  option.value = key;
+  option.text = key.charAt(0).toUpperCase() + key.slice(1);
+  select.appendChild(option);
+});
+}
 
-  // Close the modal when the close button is clicked
-  var closeButton = document.querySelector('.close-button');
-  closeButton.onclick = function() {
-      modal.style.display = "none";
-  };
-
-  // Close the modal when clicking outside of it
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  };
+document.addEventListener('click', function(event) {
+  if (event.target.id !== 'submit') {
+      document.getElementById('resultText').textContent = '';
+      document.getElementById('planetImage').style.display = 'none';
+  }
 });

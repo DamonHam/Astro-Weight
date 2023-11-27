@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: rgba(12, 12, 51, 0.844);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -8,68 +8,45 @@ body {
     align-items: center;
     height: 100%;
     margin: 0;
-    z-index: 0;
+    margin-top: 3%;
 }
-
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 75px;
+    font-family: 'helvetica, sans-serif';
+    font-size: 90px;
     position: relative;
     top: 0%;
     background: url('imgs/download.jpg');
     -webkit-background-clip: text;
     color: transparent;
-    background-position-x: 17%;
+    text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
+    background-position-x: 25%;
+    background-position-y: 12%;
 }
 .weight-label{
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: rgb(54, 99, 233);
+    font-family: 'Courier New', monospace;
+    font-size: 22px;
+    color: rgb(54, 127, 236);
+    margin-left: 50px;
+    text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
 }
 .planet-label{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 20px;
-    color: rgb(54, 99, 233)
+    text-shadow: 4px 4px 4px rgba(5, 5, 45, 0.3);
+    color: rgb(54, 127, 236);
 }
-
 #planetImage {
     width: 500px;
     height: auto;
-    position: absolute; /* Position the image absolutely */
-    bottom: 20%; /* Position it at the bottom of the screen */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Ensure it's centered properly */
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
 }
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: -7%;
-    left: 1.75%;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-.modal-content {
+#resultText{
+    font-family: 'helvetica, sans-serif';
     font-size: 20px;
-    font-weight: bold;
-    color: rgb(54, 99, 233); 
-    margin: 20% auto;
-    padding: 1px;
-    width: 20%;
-}
-.close-button {
-    color: rgb(54, 99, 233);
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close-button:hover,
-.close-button:focus {
-    color: rgb(255, 3, 3);
-    text-decoration: none;
-    cursor: pointer;
+    color: rgb(251, 66, 174);
+    margin-top: 5%;
 }
